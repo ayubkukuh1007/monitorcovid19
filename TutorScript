@@ -1,0 +1,56 @@
+Tutorial Membuat Aplikasi Monitoring COVID 19
+
+1. Buat Projeck baru -> pilih Template Navigation Drawer Activity -> Pilih Bahasa Kotlin -> Finish
+2. Pada Gradle Scripts -> build gradle (Module: app) tambahkan library berikut
+3. Pada AndroidManifest.xml tambahkan Permission Internet
+4. Pada Package res -> font -> tambahkan font style yang akan di gunakan, jenis font kali ini berupa Montserratreguller.tff
+5. Pada Package res -> menu -> tambahkan item menu dan option, yang akan di tampilkan pada navigation drawer dan Appbar
+6. Pada Package res -> drawble -> tambahkan icon yang akan digunakan dan 1 file back_edittext untuk background sebuah view edittext
+7. pada Package -> res -> colors -> tambah color yang akan digunakan 
+8. Pada package project -> buat package network
+   - Buat Interface ApiService, definisikan endpoint yang akan digunakan
+   - Buat sebuah class NetworkConfig 
+9. pada package project -> buat package ui
+10. pada package ui -> buat package Corona Global
+    - buat package adapter
+    - buat sebuah class adapter berinama WorldAdapter.class
+    - pada res -> layout -> buat sebuah layout berinama item_list_world.xml
+    
+    - buat package data
+    - buat tambahkan sebuah class Attributes.class
+    - buat tambahlkan sebuah class WorldData.class
+
+    - pada package corona Global tambahkan sebuah (fragment with ViewModel) berinama CoronaBlobal
+    - pada package res -> layout -> corona_global_fragment.xml tambahkan view untuk layout tersebut
+    - pada view model fragment -> lakukan get data berdasakan endpoint yang sesuai
+
+11. pada package ui -> buat package Corona Glolbal Indo
+    - Buat package Barchart, tambah sebuah (blank fragment)
+    - pada package res -> layout -> fragment_barchart.xml tambahkan view untuk layout tersebut
+    
+    - buat package data
+    - buat tambahkan sebuah class GLobal.class
+    - buat tambahlkan sebuah class GlobalMeninggal.class
+    - buat tambahkan sebuah class GlobalPositif.class
+    - buat tambahlkan sebuah class GlobalSembuh.class
+    - buat tambahlkan sebuah class Indonesia.class
+
+ - pada package corona Global dan Indo tambahkan sebuah (fragment with ViewModel) berinama Globalindo
+    - pada package res -> layout -> globalindo_fragment.xml tambahkan view untuk layout tersebut
+    - pada view model fragment -> lakukan get data berdasakan endpoint yang sesuai
+    - Zip operator digunkan untuk melakukan request menjadi bersamaaan
+
+12. pada package ui -> buat package Corona indo prov
+    - buat package adapter
+    - buat sebuah class adapter berinama ProvAdapter.class
+    - pada res -> layout -> buat sebuah layout berinama item_list_prov.xml
+    
+    - buat package data
+    - buat tambahkan sebuah class Attributes.class
+    - buat tambahlkan sebuah class Provinsi.class
+
+    - pada package corona indo prov tambahkan sebuah (fragment with ViewModel) berinama CoronaBlobal
+    - pada package res -> layout -> coronaindoprov_fragment.xml tambahkan view untuk layout tersebut
+    - pada view model fragment -> lakukan get data berdasakan endpoint yang sesuai
+13. Mainactivity.class
+14. Jalankan Aplikasi :D
